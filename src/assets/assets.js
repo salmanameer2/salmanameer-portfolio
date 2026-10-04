@@ -20,6 +20,7 @@ import projectImg15 from '../assets/project15.avif';
 import projectImg16 from '../assets/project16.avif';
 import projectImg17 from '../assets/project17.avif';
 import projectImg18 from '../assets/project18.avif';
+import projectImg19 from '../assets/project19.avif';
 
 
 
@@ -274,6 +275,16 @@ export const projects = [
     icons: [FaRobot, FaReact, FaCloud],
     demo: "https://rentride-rentals.vercel.app/",
     code: "https://github.com/salmanameer2/React-Digital-Agency-App",
+  },
+  {
+    id: "project_shopee-estore",
+    title: "Shopee Ecommerce App",
+    description: "Shopee Ecommerce App With React JS and Supabase Backend.",
+    image: projectImg19,
+    tech: ["React JS", "Tailwind CSS", "Supabase Backend."],
+    icons: [FaRobot, FaReact, FaCloud],
+    demo: "https://shopee-estore.netlify.app/",
+    code: "https://github.com/salmanameer2/Shopee-e-store",
   },
 ];
 
