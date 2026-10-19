@@ -12,6 +12,7 @@ import { AboutCard } from './components/AboutCard';
 import { SkillCard } from './components/SkillCard';
 import { ProjectCard } from './components/ProjectCard';
 import { GitHubStats } from './components/GitHubStats';
+import { experienceEntries } from './assets/assets';
 
 const dict = {
   en: {
@@ -574,6 +575,13 @@ export default function App() {
               {t('github')}
             </a>
             <a 
+              href="#experience" 
+              onClick={(e) => handleNavClick(e, 'experience')}
+              className="font-mono text-xs md:text-[10px] lg:text-xs text-brand-on-surface-variant hover:text-brand-primary transition-colors whitespace-nowrap"
+            >
+              {t('experience')}
+            </a>
+            <a 
               href="#contact" 
               onClick={(e) => handleNavClick(e, 'contact')}
               className="font-mono text-xs md:text-[10px] lg:text-xs text-brand-on-surface-variant hover:text-brand-primary transition-colors whitespace-nowrap"
@@ -657,6 +665,13 @@ export default function App() {
                   className="font-mono text-sm text-brand-on-surface-variant py-2 border-b border-white/5 cursor-pointer"
                 >
                   {t('github')}
+                </a>
+                <a 
+                  href="#experience" 
+                  onClick={(e) => handleNavClick(e, 'experience')}
+                  className="font-mono text-sm text-brand-on-surface-variant py-2 border-b border-white/5 cursor-pointer"
+                >
+                  {t('experience')}
                 </a>
                 <a 
                   href="#contact" 
@@ -813,6 +828,69 @@ export default function App() {
           </div>
         </motion.section>
 
+
+        {/* ==================== EXPERIENCE SECTION ==================== */}
+        <motion.section
+          id="experience"
+          className="space-y-12 scroll-mt-24 md:scroll-mt-28"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="text-center space-y-3">
+            <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
+              EXPERIENCE
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-on-surface text-center">
+              Professional Experience
+            </h2>
+            <p className="font-sans text-sm md:text-base text-brand-on-surface-variant max-w-xl mx-auto leading-relaxed">
+              Bringing together project leadership, business operations, client communication, and a commitment to delivering quality digital solutions.
+            </p>
+            <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {experienceEntries.map((entry, index) => (
+              <motion.div
+                key={entry.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: (index % 3) * 0.1 }}
+                whileHover={{ y: -4 }}
+                className="gradient-border-card p-6 md:p-8 rounded-xl flex flex-col h-full group"
+              >
+                <div className="flex items-start justify-between gap-4 mb-5">
+                  <div className="space-y-1.5 min-w-0">
+                    <h3 className="font-display font-bold text-lg leading-tight text-brand-on-surface group-hover:text-brand-primary transition-colors duration-300">
+                      {entry.title}
+                    </h3>
+                    <p className="font-mono text-[11px] md:text-xs text-brand-primary/80 uppercase tracking-wide">
+                      {entry.company}
+                    </p>
+                  </div>
+                  <span className="shrink-0 px-2.5 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 font-mono text-[10px] font-bold text-brand-primary whitespace-nowrap">
+                    {entry.dates}
+                  </span>
+                </div>
+
+                <ul className="space-y-2.5">
+                  {entry.points.map((point, pIndex) => (
+                    <li
+                      key={pIndex}
+                      className="flex items-start gap-2.5 font-sans text-xs text-brand-on-surface-variant leading-relaxed"
+                    >
+                      <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-brand-primary/70 group-hover:bg-brand-primary shrink-0 transition-colors duration-300" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
 
         {/* ==================== SECTION 2: TECH STACK ==================== */}
         <motion.section 

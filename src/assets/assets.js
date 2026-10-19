@@ -52,6 +52,64 @@ export const aboutInfo = [
 ];
 
 
+export const experienceEntries = [
+  {
+    id: 'experience-1',
+    title: 'Project Manager',
+    company: 'The Real Tech (TRT)',
+    dates: '2024–2025',
+    points: [
+      'Directed the end-to-end delivery lifecycle for custom website projects, coordinating handoffs across sales, content, development, support, and SEO teams.',
+      'Led web developers building custom client websites, overseeing timelines, revisions, quality assurance, and final customer handoff.',
+      'Served as the primary liaison between customer support and development teams, coordinating client revisions through developer fixes and final approval.',
+      'Assigned and tracked content-creation tasks after sales closure and coordinated completed projects with the SEO team for continuity.',
+      'Oversaw 100+ concurrent website projects per month across the production pipeline while maintaining delivery timelines and client satisfaction.',
+    ]
+  },
+  {
+    id: 'experience-2',
+    title: 'Business Development Executive',
+    company: 'TAWA Estate',
+    dates: '2018–2023',
+    points: [
+      'Presented properties to prospective buyers and guided clients through the purchase decision process.',
+      'Negotiated contracts and managed sales activities through deal completion, including fee collection and payment documentation.',
+      'Maintained ongoing client relationships to support repeat and referral business.',
+    ]
+  },
+  {
+    id: 'experience-3',
+    title: 'Manager, Branch Operations (Retail)',
+    company: 'Meat N More',
+    dates: '2013–2017',
+    points: [
+      'Managed inbound and outbound stock levels, purchasing, staff supervision, customer-service standards, and merchandise presentation.',
+      'Negotiated vendor pricing through market research to reduce costs and improve margins.',
+    ]
+  },
+  {
+    id: 'experience-4',
+    title: 'Assistant Internal Quality Auditor',
+    company: 'United Management Consultants',
+    dates: '2008–2013',
+    points: [
+      'Assisted senior auditors with internal audits, audit plans, schedules, reporting, and presentation of findings.',
+      'Identified non-compliance issues, evaluated corrective actions, and supported employee training on quality-control standards.',
+    ]
+  },
+  {
+    id: 'experience-5',
+    title: 'Assistant Administration Manager',
+    company: 'United Management Consultants',
+    dates: '2004–2008',
+    points: [
+      'Managed office inventory and vendor orders, meeting logistics, correspondence, reports, and presentations.',
+      'Maintained expense and capital-expenditure records.',
+    ]
+  }
+];
+
+
 
 export const skills = [
   {
