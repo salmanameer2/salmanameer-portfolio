@@ -21,13 +21,18 @@ import projectImg16 from '../assets/project16.avif';
 import projectImg17 from '../assets/project17.avif';
 import projectImg18 from '../assets/project18.avif';
 import projectImg19 from '../assets/project19.avif';
+import projectImg20 from '../assets/project20.avif';
 
 
 
 
 export const assets = {
   profileImg, profileImg2,
-}
+  projectImg1, projectImg2, projectImg3, projectImg4, projectImg5,
+  projectImg6, projectImg7, projectImg8, projectImg9, projectImg10,
+  projectImg11, projectImg12, projectImg13, projectImg14, projectImg15,
+  projectImg16, projectImg17, projectImg18, projectImg19, projectImg20
+};  
 
 
 export const aboutInfo = [
@@ -343,6 +348,16 @@ export const projects = [
     icons: [FaRobot, FaReact, FaCloud],
     demo: "https://shopee-estore.netlify.app/",
     code: "https://github.com/salmanameer2/Shopee-e-store",
+  },
+  {
+    id: "AIE AI Powered Chatbot",
+    title: "AIE Chatbot",
+    description: "Shopee Ecommerce App With React JS and Supabase Backend.",
+    image: projectImg19,
+    tech: ["HTML", "CSS", "JavaScript, Express JS, OpenRouter API"],
+    icons: [FaRobot, FaReact, FaCloud],
+    demo: "https://aie-chatbot.vercel.app/",
+    code: "https://github.com/salmanameer2/AI-chatbot",
   },
 ];
 
