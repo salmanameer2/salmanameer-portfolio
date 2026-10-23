@@ -352,8 +352,8 @@ export const projects = [
   {
     id: "AIE AI Powered Chatbot",
     title: "AIE Chatbot",
-    description: "Shopee Ecommerce App With React JS and Supabase Backend.",
-    image: projectImg19,
+    description: "AI Powered Chatbot with openRouter API.",
+    image: projectImg20,
     tech: ["HTML", "CSS", "JavaScript, Express JS, OpenRouter API"],
     icons: [FaRobot, FaReact, FaCloud],
     demo: "https://aie-chatbot.vercel.app/",
