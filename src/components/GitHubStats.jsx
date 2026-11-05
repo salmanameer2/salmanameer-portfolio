@@ -352,7 +352,7 @@ export const GitHubStats = ({ lang }) => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        whileHover={{ y: -4, borderColor: 'rgba(0, 218, 243, 0.25)' }}
+                        whileHover={{ y: -4, borderColor: 'rgba(229, 139, 174, 0.25)' }}
                         className="glass p-5 rounded-xl border border-white/5 bg-surface-container/10 flex flex-col justify-between gap-4 group transition-all duration-300"
                       >
                         <div className="space-y-2">

@@ -330,8 +330,8 @@ export const projects = [
     code: "https://github.com/salmanameer2/React-Digital-Agency-App",
   },
   {
-    id: "project_digital_agency",
-    title: "React Digital Agency App",
+    id: "project_car_rental",
+    title: "React Car Rental App",
     description: "A Complete Digital Agency App Using React JS and Tailwind CSS.",
     image: projectImg18,
     tech: ["React JS", "Tailwind CSS", "Framer Motion"],

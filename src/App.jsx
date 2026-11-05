@@ -13,6 +13,7 @@ import { SkillCard } from './components/SkillCard';
 import { ProjectCard } from './components/ProjectCard';
 import { GitHubStats } from './components/GitHubStats';
 import { experienceEntries } from './assets/assets';
+import heroBackground from './assets/background.mp4';
 
 const dict = {
   en: {
@@ -568,18 +569,18 @@ export default function App() {
               {t('projects')}
             </a>
             <a 
-              href="#github-stats" 
-              onClick={(e) => handleNavClick(e, 'github-stats')}
-              className="font-mono text-xs md:text-[10px] lg:text-xs text-brand-on-surface-variant hover:text-brand-primary transition-colors whitespace-nowrap"
-            >
-              {t('github')}
-            </a>
-            <a 
               href="#experience" 
               onClick={(e) => handleNavClick(e, 'experience')}
               className="font-mono text-xs md:text-[10px] lg:text-xs text-brand-on-surface-variant hover:text-brand-primary transition-colors whitespace-nowrap"
             >
               {t('experience')}
+            </a>
+            <a 
+              href="#github-stats" 
+              onClick={(e) => handleNavClick(e, 'github-stats')}
+              className="font-mono text-xs md:text-[10px] lg:text-xs text-brand-on-surface-variant hover:text-brand-primary transition-colors whitespace-nowrap"
+            >
+              {t('github')}
             </a>
             <a 
               href="#contact" 
@@ -611,7 +612,7 @@ export default function App() {
               onClick={(e) => handleNavClick(e, 'contact')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-3 py-1.5 md:px-2.5 md:py-1 lg:px-5 lg:py-2 rounded-lg bg-brand-primary-container text-surface-base font-mono font-bold text-[11px] md:text-[10px] lg:text-xs shadow-[0_0_15px_rgba(0,229,255,0.25)] hover:bg-brand-primary hover:shadow-[0_0_20px_rgba(0,229,255,0.4)] transition-all flex items-center gap-1 lg:gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
+              className="px-3 py-1.5 md:px-2.5 md:py-1 lg:px-5 lg:py-2 rounded-lg bg-brand-primary-container text-surface-base font-mono font-bold text-[11px] md:text-[10px] lg:text-xs shadow-[0_0_15px_rgba(229,139,174,0.25)] hover:bg-brand-primary hover:shadow-[0_0_20px_rgba(229,139,174,0.4)] transition-all flex items-center gap-1 lg:gap-1.5 cursor-pointer whitespace-nowrap shrink-0"
             >
               {t('hireMe')}
             </motion.a>
@@ -660,18 +661,18 @@ export default function App() {
                   {t('projects')}
                 </a>
                 <a 
-                  href="#github-stats" 
-                  onClick={(e) => handleNavClick(e, 'github-stats')}
-                  className="font-mono text-sm text-brand-on-surface-variant py-2 border-b border-white/5 cursor-pointer"
-                >
-                  {t('github')}
-                </a>
-                <a 
                   href="#experience" 
                   onClick={(e) => handleNavClick(e, 'experience')}
                   className="font-mono text-sm text-brand-on-surface-variant py-2 border-b border-white/5 cursor-pointer"
                 >
                   {t('experience')}
+                </a>
+                <a 
+                  href="#github-stats" 
+                  onClick={(e) => handleNavClick(e, 'github-stats')}
+                  className="font-mono text-sm text-brand-on-surface-variant py-2 border-b border-white/5 cursor-pointer"
+                >
+                  {t('github')}
                 </a>
                 <a 
                   href="#contact" 
@@ -718,8 +719,23 @@ export default function App() {
       <main className="relative z-10 pt-28 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 space-y-20 md:space-y-28 lg:space-y-36 pb-24">
         
         {/* ==================== HERO HERO SECTION ==================== */}
-        <section id="hero" className="min-h-[75vh] flex items-center py-12">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
+        <section id="hero" className="relative min-h-[75vh] flex items-center py-12 px-6 md:px-10 overflow-hidden rounded-3xl">
+          {/* Background video */}
+          <video
+            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+            src={heroBackground}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            aria-hidden="true"
+          />
+
+          {/* Dark overlay to keep the white text readable */}
+          <div className="absolute inset-0 bg-gradient-to-r from-surface-base/95 via-surface-base/80 to-surface-base/60" />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
             
             {/* Left intro copy */}
             <motion.div 
@@ -746,7 +762,7 @@ export default function App() {
                   onClick={(e) => handleNavClick(e, 'projects')}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="px-6 py-3.5 rounded-lg bg-brand-primary text-surface-base font-mono font-bold text-sm flex items-center gap-2 hover:bg-brand-primary-dim transition-colors group shadow-[0_0_20px_rgba(0,218,243,0.2)] cursor-pointer"
+                  className="px-6 py-3.5 rounded-lg bg-brand-primary text-surface-base font-mono font-bold text-sm flex items-center gap-2 hover:bg-brand-primary-dim transition-colors group shadow-[0_0_20px_rgba(229,139,174,0.2)] cursor-pointer"
                 >
                   {t('exploreProjects')}
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -828,69 +844,6 @@ export default function App() {
           </div>
         </motion.section>
 
-
-        {/* ==================== EXPERIENCE SECTION ==================== */}
-        <motion.section
-          id="experience"
-          className="space-y-12 scroll-mt-24 md:scroll-mt-28"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <div className="text-center space-y-3">
-            <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
-              EXPERIENCE
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-on-surface text-center">
-              Professional Experience
-            </h2>
-            <p className="font-sans text-sm md:text-base text-brand-on-surface-variant max-w-xl mx-auto leading-relaxed">
-              Bringing together project leadership, business operations, client communication, and a commitment to delivering quality digital solutions.
-            </p>
-            <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {experienceEntries.map((entry, index) => (
-              <motion.div
-                key={entry.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.6, ease: "easeOut", delay: (index % 3) * 0.1 }}
-                whileHover={{ y: -4 }}
-                className="gradient-border-card p-6 md:p-8 rounded-xl flex flex-col h-full group"
-              >
-                <div className="flex items-start justify-between gap-4 mb-5">
-                  <div className="space-y-1.5 min-w-0">
-                    <h3 className="font-display font-bold text-lg leading-tight text-brand-on-surface group-hover:text-brand-primary transition-colors duration-300">
-                      {entry.title}
-                    </h3>
-                    <p className="font-mono text-[11px] md:text-xs text-brand-primary/80 uppercase tracking-wide">
-                      {entry.company}
-                    </p>
-                  </div>
-                  <span className="shrink-0 px-2.5 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 font-mono text-[10px] font-bold text-brand-primary whitespace-nowrap">
-                    {entry.dates}
-                  </span>
-                </div>
-
-                <ul className="space-y-2.5">
-                  {entry.points.map((point, pIndex) => (
-                    <li
-                      key={pIndex}
-                      className="flex items-start gap-2.5 font-sans text-xs text-brand-on-surface-variant leading-relaxed"
-                    >
-                      <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-brand-primary/70 group-hover:bg-brand-primary shrink-0 transition-colors duration-300" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
 
         {/* ==================== SECTION 2: TECH STACK ==================== */}
         <motion.section 
@@ -1019,6 +972,70 @@ export default function App() {
         </motion.section>
 
 
+        {/* ==================== EXPERIENCE SECTION ==================== */}
+        <motion.section
+          id="experience"
+          className="space-y-12 scroll-mt-24 md:scroll-mt-28"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <div className="text-center space-y-3">
+            <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
+              EXPERIENCE
+            </span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-on-surface text-center">
+              Professional Experience
+            </h2>
+            <p className="font-sans text-sm md:text-base text-brand-on-surface-variant max-w-xl mx-auto leading-relaxed">
+              Bringing together project leadership, business operations, client communication, and a commitment to delivering quality digital solutions.
+            </p>
+            <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {experienceEntries.map((entry, index) => (
+              <motion.div
+                key={entry.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.6, ease: "easeOut", delay: (index % 3) * 0.1 }}
+                whileHover={{ y: -4 }}
+                className="gradient-border-card p-6 md:p-8 rounded-xl flex flex-col h-full group"
+              >
+                <div className="flex items-start justify-between gap-4 mb-5">
+                  <div className="space-y-1.5 min-w-0">
+                    <h3 className="font-display font-bold text-lg leading-tight text-brand-on-surface group-hover:text-brand-primary transition-colors duration-300">
+                      {entry.title}
+                    </h3>
+                    <p className="font-mono text-[11px] md:text-xs text-brand-primary/80 uppercase tracking-wide">
+                      {entry.company}
+                    </p>
+                  </div>
+                  <span className="shrink-0 px-2.5 py-1 rounded-full bg-brand-primary/10 border border-brand-primary/20 font-mono text-[10px] font-bold text-brand-primary whitespace-nowrap">
+                    {entry.dates}
+                  </span>
+                </div>
+
+                <ul className="space-y-2.5">
+                  {entry.points.map((point, pIndex) => (
+                    <li
+                      key={pIndex}
+                      className="flex items-start gap-2.5 font-sans text-xs text-brand-on-surface-variant leading-relaxed"
+                    >
+                      <span className="mt-[5px] w-1.5 h-1.5 rounded-full bg-brand-primary/70 group-hover:bg-brand-primary shrink-0 transition-colors duration-300" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+
         {/* ==================== SECTION: GITHUB LIVE ANALYTICS ==================== */}
         <motion.section 
           id="github-stats" 
@@ -1144,7 +1161,7 @@ export default function App() {
                         type="submit"
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.99 }}
-                        className="w-full bg-brand-primary text-surface-base font-mono font-bold text-xs py-4 rounded-lg hover:bg-brand-primary-dim transition-all active:scale-[0.98] shadow-[0_0_20px_rgba(0,218,243,0.2)] cursor-pointer"
+                        className="w-full bg-brand-primary text-surface-base font-mono font-bold text-xs py-4 rounded-lg hover:bg-brand-primary-dim transition-all active:scale-[0.98] shadow-[0_0_20px_rgba(229,139,174,0.2)] cursor-pointer"
                       >
                         {t('sendTransmission')}
                       </motion.button>
@@ -1400,7 +1417,7 @@ export default function App() {
           onClick={() => setTheme('dark')}
           className={`p-2.5 rounded-full transition-all flex items-center justify-center relative cursor-pointer group ${
             theme === 'dark' 
-              ? 'text-brand-primary bg-surface-base border border-brand-primary/20 shadow-[0_0_12px_rgba(195,245,255,0.2)]' 
+              ? 'text-brand-primary bg-surface-base border border-brand-primary/20 shadow-[0_0_12px_rgba(243,215,230,0.2)]' 
               : 'text-brand-on-surface-variant hover:text-brand-on-surface'
           }`}
           title="Switch to Dark Mode"
@@ -1412,7 +1429,7 @@ export default function App() {
           onClick={() => setTheme('cyber-light')}
           className={`p-2.5 rounded-full transition-all flex items-center justify-center relative cursor-pointer group ${
             theme === 'cyber-light' 
-              ? 'text-brand-primary bg-surface-base border border-brand-primary/25 shadow-[0_0_12px_rgba(0,90,112,0.2)]' 
+              ? 'text-brand-primary bg-surface-base border border-brand-primary/25 shadow-[0_0_12px_rgba(122,61,110,0.2)]' 
               : 'text-brand-on-surface-variant hover:text-brand-on-surface'
           }`}
           title="Switch to Cyber-Light Mode"

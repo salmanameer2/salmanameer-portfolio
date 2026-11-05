@@ -27,7 +27,7 @@ export const ProjectCard = ({
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.6, ease: 'easeOut', delay: (index % 3) * 0.1 }}
       whileHover={{ y: -6 }}
-      className="glass rounded-2xl border border-white/5 bg-surface-container/10 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-brand-primary/20 hover:shadow-[0_10px_30px_rgba(0,218,243,0.05)]"
+      className="glass rounded-2xl border border-white/5 bg-surface-container/10 overflow-hidden flex flex-col justify-between group transition-all duration-300 hover:border-brand-primary/20 hover:shadow-[0_10px_30px_rgba(229,139,174,0.05)]"
     >
       <div className="space-y-4 cursor-pointer" onClick={handleCardClick}>
         {/* Project Thumbnail Frame */}
@@ -81,7 +81,7 @@ export const ProjectCard = ({
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="flex-1 py-2 rounded-lg bg-brand-primary text-surface-base font-mono font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-brand-primary-dim transition-all active:scale-95 cursor-pointer shadow-[0_0_15px_rgba(0,218,243,0.1)]"
+            className="flex-1 py-2 rounded-lg bg-brand-primary text-surface-base font-mono font-bold text-xs flex items-center justify-center gap-1.5 hover:bg-brand-primary-dim transition-all active:scale-95 cursor-pointer shadow-[0_0_15px_rgba(229,139,174,0.1)]"
           >
             <ExternalLink className="w-3.5 h-3.5" />
             Live Preview
