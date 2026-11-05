@@ -13,7 +13,7 @@ import { SkillCard } from './components/SkillCard';
 import { ProjectCard } from './components/ProjectCard';
 import { GitHubStats } from './components/GitHubStats';
 import { experienceEntries } from './assets/assets';
-import heroBackground from './assets/background.mp4';
+import heroHomeBackground from './assets/herohome.jpg';
 
 const dict = {
   en: {
@@ -95,7 +95,22 @@ const dict = {
     footerSpec1: "High-Performance API Design",
     footerSpec2: "Real-Time Systems Integration",
     footerSpec3: "Scalable Database Schemas",
-    footerSpec4: "Modern UI Engineering"
+    footerSpec4: "Modern UI Engineering",
+    aboutMe: "ABOUT ME",
+    aboutP1: "I'm Salman Ameer, a MERN stack developer and technical project leader based in Lahore, Pakistan. I turn ideas into fast, scalable web products — from database schemas and APIs to the final pixel.",
+    aboutP2: "My work blends full-stack engineering with delivery leadership: I've built 20+ portfolio projects and coordinated 100+ client websites a month across design, development, content, and SEO teams.",
+    aboutAvailability: "Open to freelance & full-time roles",
+    aboutAvailabilityLabel: "Availability",
+    aboutStatProjects: "Projects Built",
+    aboutStatDeliveries: "Client Sites / Month",
+    aboutStatStack: "Core MERN Technologies",
+    aboutLocation: "Location",
+    aboutFocus: "Focus",
+    aboutFactFocus: "Full-Stack MERN Engineering",
+    aboutFactAvailability: "Freelance & Full-Time",
+    aboutCtaWork: "Explore My Work",
+    aboutCtaTalk: "Let's Talk",
+    aboutPrinciplesTitle: "How I Work"
   },
   ur: {
     home: "ہوم",
@@ -176,7 +191,22 @@ const dict = {
     footerSpec1: "اعلی کارکردگی والی API ڈیزائننگ",
     footerSpec2: "ریئل ٹائم سسٹم انٹیگریشن",
     footerSpec3: "اسکیل ایبل ڈیٹا بیس ڈیزائن",
-    footerSpec4: "جدید یوزر انٹرفیس انجینئرنگ"
+    footerSpec4: "جدید یوزر انٹرفیس انجینئرنگ",
+    aboutMe: "میرے بارے میں",
+    aboutP1: "میں سلمان امیر ہوں، لاہور، پاکستان میں مقیم ایک MERN اسٹیک ڈویلپر اور ٹیکنیکل پروجیکٹ لیڈر۔ میں خیالات کو تیز اور اسکیل ایبل ویب پروڈکٹس میں بدلتا ہوں — ڈیٹا بیس اسکیمہ اور APIs سے لے کر حتمی پکسل تک۔",
+    aboutP2: "میرا کام فل اسٹیک انجینئرنگ اور ڈیلیوری لیڈرشپ کو یکجا کرتا ہے: میں نے 20+ پورٹ فولیو پروجیکٹس بنائے اور ڈیزائن، ڈویلپمنٹ، کانٹینٹ اور SEO ٹیموں کے ساتھ ہر ماہ 100+ کلائنٹ ویب سائٹس کو مربوط کیا۔",
+    aboutAvailability: "فری لانس اور کل وقتی کرداروں کے لیے دستیاب",
+    aboutAvailabilityLabel: "دستیابی",
+    aboutStatProjects: "بنائے گئے پروجیکٹس",
+    aboutStatDeliveries: "کلائنٹ ویب سائٹس / ماہ",
+    aboutStatStack: "بنیادی MERN ٹیکنالوجیز",
+    aboutLocation: "مقام",
+    aboutFocus: "توجہ",
+    aboutFactFocus: "فل اسٹیک MERN انجینئرنگ",
+    aboutFactAvailability: "فری لانس اور کل وقتی",
+    aboutCtaWork: "میرا کام دیکھیں",
+    aboutCtaTalk: "آئیں بات کریں",
+    aboutPrinciplesTitle: "میں کیسے کام کرتا ہوں"
   },
   ar: {
     home: "الرئيسية",
@@ -257,7 +287,22 @@ const dict = {
     footerSpec1: "تصميم واجهة برمجة تطبيقات عالية الأداء",
     footerSpec2: "تكامل الأنظمة في الوقت الفعلي",
     footerSpec3: "مخططات قواعد البيانات القابلة للتطوير",
-    footerSpec4: "هندسة واجهات المستخدم الحديثة"
+    footerSpec4: "هندسة واجهات المستخدم الحديثة",
+    aboutMe: "نبذة عني",
+    aboutP1: "أنا سلمان أمير، مطور MERN Stack وقائد مشاريع تقنية مقيم في لاهور، باكستان. أحوّل الأفكار إلى منتجات ويب سريعة وقابلة للتطوير — من مخططات قواعد البيانات وواجهات API إلى آخر بكسل.",
+    aboutP2: "يجمع عملي بين هندسة الستاك الكامل وقيادة التسليم: أنجزت أكثر من 20 مشروعًا في معرض أعمالي ونسّقت أكثر من 100 موقع عميل شهريًا مع فرق التصميم والتطوير والمحتوى وتحسين محركات البحث.",
+    aboutAvailability: "متاح للعمل الحر والوظائف بدوام كامل",
+    aboutAvailabilityLabel: "التوفر",
+    aboutStatProjects: "مشاريع منجزة",
+    aboutStatDeliveries: "مواقع عملاء / شهريًا",
+    aboutStatStack: "تقنيات MERN الأساسية",
+    aboutLocation: "الموقع",
+    aboutFocus: "التركيز",
+    aboutFactFocus: "هندسة MERN للستاك الكامل",
+    aboutFactAvailability: "عمل حر وبدوام كامل",
+    aboutCtaWork: "استكشف أعمالي",
+    aboutCtaTalk: "لنتحدث",
+    aboutPrinciplesTitle: "كيف أعمل"
   }
 };
 
@@ -719,21 +764,18 @@ export default function App() {
       <main className="relative z-10 pt-28 max-w-7xl mx-auto px-6 md:px-8 lg:px-12 space-y-20 md:space-y-28 lg:space-y-36 pb-24">
         
         {/* ==================== HERO HERO SECTION ==================== */}
-        <section id="hero" className="relative min-h-[75vh] flex items-center py-12 px-6 md:px-10 overflow-hidden rounded-3xl">
-          {/* Background video */}
-          <video
-            className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-            src={heroBackground}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
+        <section id="hero" className="relative min-h-[75vh] flex items-center py-12 px-6 md:px-10 overflow-hidden rounded-3xl border border-brand-outline-variant/30">
+          {/* Background image */}
+          <img
+            src={heroHomeBackground}
+            alt=""
             aria-hidden="true"
+            className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
           />
 
-          {/* Dark overlay to keep the white text readable */}
-          <div className="absolute inset-0 bg-gradient-to-r from-surface-base/95 via-surface-base/80 to-surface-base/60" />
+          {/* Theme-aware overlays to keep the copy readable and blend the image into the page */}
+          <div className="absolute inset-0 bg-gradient-to-r from-surface-base via-surface-base/90 to-surface-base/40 md:to-surface-base/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-base/70 via-transparent to-surface-base/30" />
 
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
             
@@ -811,10 +853,10 @@ export default function App() {
         </section>
 
 
-        {/* ==================== SECTION: PHILOSOPHY & ABOUT ==================== */}
+        {/* ==================== SECTION: ABOUT ==================== */}
         <motion.section 
           id="about" 
-          className="space-y-12 scroll-mt-24 md:scroll-mt-28"
+          className="space-y-14 scroll-mt-24 md:scroll-mt-28"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
@@ -822,25 +864,189 @@ export default function App() {
         >
           <div className="text-center space-y-3">
             <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
-              {lang === 'en' ? 'OVERVIEW' : lang === 'ur' ? 'جائزہ' : 'نظرة عامة'}
+              {t('aboutMe')}
             </span>
             <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-on-surface text-center">
-              {lang === 'en' ? 'Engineering Philosophy' : lang === 'ur' ? 'انجینئرنگ فلسفہ' : 'فلسفة الهندسة'}
+              {t('archEcosystems')}
             </h2>
             <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {aboutInfo.map((info, index) => (
-              <AboutCard
-                key={index}
-                icon={info.icon}
-                title={info.title}
-                description={info.description}
-                color={info.color}
-                index={index}
-              />
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+            {/* Portrait card */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-start">
+              <div className="relative w-full max-w-xs sm:max-w-sm">
+                {/* Ambient glow */}
+                <div className="absolute -inset-4 bg-gradient-to-tr from-brand-primary/20 to-brand-secondary/20 blur-2xl rounded-3xl opacity-60" aria-hidden="true" />
+
+                <div className="relative gradient-border-card rounded-3xl p-2 overflow-hidden">
+                  <div className="relative rounded-[1.35rem] overflow-hidden">
+                    <img 
+                      src={assets.profileImg2} 
+                      alt="Salman Ameer, MERN Stack Developer" 
+                      referrerPolicy="no-referrer"
+                      className="w-full aspect-[4/5] object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-surface-base/70 via-transparent to-transparent" />
+                  </div>
+
+                  {/* Availability badge */}
+                  <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-xl bg-surface-base/70 backdrop-blur-md border border-white/10 px-3.5 py-2.5">
+                    <span className="relative flex w-2 h-2 shrink-0">
+                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
+                      <span className="relative inline-flex w-2 h-2 rounded-full bg-emerald-400" />
+                    </span>
+                    <span className="font-mono text-[10px] md:text-[11px] font-bold uppercase tracking-wider text-brand-on-surface leading-snug">
+                      {t('aboutAvailability')}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Bio & highlights */}
+            <div className="lg:col-span-7 space-y-7">
+              <div className="space-y-4">
+                <p className="font-mono text-[11px] text-brand-primary tracking-[0.2em] uppercase">
+                  {t('role')}
+                </p>
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-brand-on-surface">
+                  Salman Ameer
+                </h3>
+                <p className="font-sans text-sm md:text-base text-brand-on-surface-variant leading-relaxed">
+                  {t('aboutP1')}
+                </p>
+                <p className="font-sans text-sm md:text-base text-brand-on-surface-variant leading-relaxed">
+                  {t('aboutP2')}
+                </p>
+              </div>
+
+              {/* Portfolio stats */}
+              <div className="grid grid-cols-3 gap-3 md:gap-4">
+                {[
+                  { value: `${assetsProjects.length}+`, label: t('aboutStatProjects') },
+                  { value: '100+', label: t('aboutStatDeliveries') },
+                  { value: '4', label: t('aboutStatStack') }
+                ].map((stat) => (
+                  <div 
+                    key={stat.label} 
+                    className="gradient-border-card rounded-xl px-2 py-4 md:px-5 md:py-5 text-center"
+                  >
+                    <p className="font-display text-2xl md:text-3xl font-extrabold text-brand-primary">
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 font-mono text-[9px] md:text-[10px] uppercase tracking-wider text-brand-on-surface-variant leading-snug">
+                      {stat.label}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Quick facts */}
+              <div className="gradient-border-card rounded-xl p-5 md:p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/15 text-brand-primary flex items-center justify-center shrink-0">
+                    <MapPin className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
+                      {t('aboutLocation')}
+                    </p>
+                    <p className="font-sans text-xs font-semibold text-brand-on-surface">
+                      Lahore, Pakistan
+                    </p>
+                  </div>
+                </div>
+
+                <a href="mailto:salman.leo2@gmail.com" className="flex items-center gap-3 group">
+                  <div className="w-9 h-9 rounded-lg bg-brand-secondary/10 border border-brand-secondary/15 text-brand-secondary flex items-center justify-center shrink-0">
+                    <Mail className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
+                      {t('emailAddress')}
+                    </p>
+                    <p className="font-sans text-xs font-semibold text-brand-on-surface group-hover:text-brand-primary transition-colors break-all">
+                      salman.leo2@gmail.com
+                    </p>
+                  </div>
+                </a>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/15 text-brand-primary flex items-center justify-center shrink-0">
+                    <Code2 className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
+                      {t('aboutFocus')}
+                    </p>
+                    <p className="font-sans text-xs font-semibold text-brand-on-surface">
+                      {t('aboutFactFocus')}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <div className="w-9 h-9 rounded-lg bg-brand-tertiary/10 border border-brand-tertiary/15 text-brand-tertiary flex items-center justify-center shrink-0">
+                    <Rocket className="w-4 h-4" />
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
+                      {t('aboutAvailabilityLabel')}
+                    </p>
+                    <p className="font-sans text-xs font-semibold text-brand-on-surface">
+                      {t('aboutFactAvailability')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTAs */}
+              <div className="flex flex-wrap gap-4">
+                <a 
+                  href="#projects" 
+                  onClick={(e) => handleNavClick(e, 'projects')}
+                  className="px-5 py-3 rounded-lg bg-brand-primary text-surface-base font-mono font-bold text-xs flex items-center gap-2 hover:bg-brand-primary-dim transition-colors group cursor-pointer shadow-[0_0_20px_rgba(229,139,174,0.2)]"
+                >
+                  {t('aboutCtaWork')}
+                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={(e) => handleNavClick(e, 'contact')}
+                  className="px-5 py-3 rounded-lg border border-brand-outline-variant text-brand-primary font-mono font-bold text-xs hover:bg-white/5 transition-colors cursor-pointer"
+                >
+                  {t('aboutCtaTalk')}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Engineering principles */}
+          <div className="space-y-8 pt-4">
+            <div className="text-center space-y-3">
+              <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
+                {t('engPhilosophy')}
+              </span>
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-brand-on-surface text-center">
+                {t('aboutPrinciplesTitle')}
+              </h3>
+              <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {aboutInfo.map((info, index) => (
+                <AboutCard
+                  key={index}
+                  icon={info.icon}
+                  title={info.title}
+                  description={info.description}
+                  color={info.color}
+                  index={index}
+                />
+              ))}
+            </div>
           </div>
         </motion.section>
 
@@ -895,10 +1101,10 @@ export default function App() {
             </h3>
             <p className="font-sans text-xs md:text-sm text-brand-on-surface-variant max-w-xl mx-auto leading-relaxed pb-2">
               {lang === 'en' 
-                ? 'Explore all 17 assets and interactive builds. Filter by technology and launch the virtualization sandbox dev-server for any project node.'
+                ? 'Explore all 20 assets and interactive builds. Filter by technology and launch the virtualization sandbox dev-server for any project node.'
                 : lang === 'ur'
-                ? 'تمام 17 اثاثے اور انٹرایکٹو پراجیکٹس دیکھیں۔ ٹیکنالوجی کے لحاظ سے فلٹر کریں اور کسی بھی پراجیکٹ کا سینڈ باکس لانچ کریں۔'
-                : 'استكشف جميع المشاريع الـ 17. قم بالتصفية حسب التكنولوجيا وقم بتشغيل خادم التطوير الافتراضي لأي مشروع.'}
+                ? 'تمام 20 اثاثے اور انٹرایکٹو پراجیکٹس دیکھیں۔ ٹیکنالوجی کے لحاظ سے فلٹر کریں اور کسی بھی پراجیکٹ کا سینڈ باکس لانچ کریں۔'
+                : 'استكشف جميع المشاريع الـ 20. قم بالتصفية حسب التكنولوجيا وقم بتشغيل خادم التطوير الافتراضي لأي مشروع.'}
             </p>
             <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
           </div>
