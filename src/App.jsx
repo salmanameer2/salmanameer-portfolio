@@ -11,6 +11,7 @@ import { assets, skills as assetsSkills, projects as assetsProjects } from './as
 import { SkillCard } from './components/SkillCard';
 import { ProjectCard } from './components/ProjectCard';
 import { GitHubStats } from './components/GitHubStats';
+import { About } from './components/About';
 import { experienceEntries } from './assets/assets';
 import heroHomeBackground from './assets/herohome.jpg';
 
@@ -96,6 +97,9 @@ const dict = {
     footerSpec3: "Scalable Database Schemas",
     footerSpec4: "Modern UI Engineering",
     aboutMe: "ABOUT ME",
+    aboutHeadline: "From operations leadership to full-stack delivery.",
+    aboutSnapshotTitle: "Career Snapshot",
+    aboutSnapshotDesc: "A progression from operations and quality to project delivery and full-stack engineering.",
     aboutP1: "I'm Salman Ameer, a MERN stack developer and technical project leader based in Lahore, Pakistan. I turn ideas into fast, scalable web products — from database schemas and APIs to the final pixel.",
     aboutP2: "My work blends full-stack engineering with delivery leadership: I've built 20+ portfolio projects and coordinated 100+ client websites a month across design, development, content, and SEO teams.",
     aboutAvailability: "Open to freelance & full-time roles",
@@ -192,6 +196,9 @@ const dict = {
     footerSpec3: "اسکیل ایبل ڈیٹا بیس ڈیزائن",
     footerSpec4: "جدید یوزر انٹرفیس انجینئرنگ",
     aboutMe: "میرے بارے میں",
+    aboutHeadline: "آپریشنز کی قیادت سے فل اسٹیک ڈیلیوری تک۔",
+    aboutSnapshotTitle: "کیریئر کا خلاصہ",
+    aboutSnapshotDesc: "آپریشنز اور کوالٹی سے پروجیکٹ ڈیلیوری اور فل اسٹیک انجینئرنگ تک کا سفر۔",
     aboutP1: "میں سلمان امیر ہوں، لاہور، پاکستان میں مقیم ایک MERN اسٹیک ڈویلپر اور ٹیکنیکل پروجیکٹ لیڈر۔ میں خیالات کو تیز اور اسکیل ایبل ویب پروڈکٹس میں بدلتا ہوں — ڈیٹا بیس اسکیمہ اور APIs سے لے کر حتمی پکسل تک۔",
     aboutP2: "میرا کام فل اسٹیک انجینئرنگ اور ڈیلیوری لیڈرشپ کو یکجا کرتا ہے: میں نے 20+ پورٹ فولیو پروجیکٹس بنائے اور ڈیزائن، ڈویلپمنٹ، کانٹینٹ اور SEO ٹیموں کے ساتھ ہر ماہ 100+ کلائنٹ ویب سائٹس کو مربوط کیا۔",
     aboutAvailability: "فری لانس اور کل وقتی کرداروں کے لیے دستیاب",
@@ -288,6 +295,9 @@ const dict = {
     footerSpec3: "مخططات قواعد البيانات القابلة للتطوير",
     footerSpec4: "هندسة واجهات المستخدم الحديثة",
     aboutMe: "نبذة عني",
+    aboutHeadline: "من قيادة العمليات إلى التسليم المتكامل.",
+    aboutSnapshotTitle: "لمحة عن المسيرة المهنية",
+    aboutSnapshotDesc: "مسيرة من العمليات والجودة إلى تسليم المشاريع وهندسة الويب المتكاملة.",
     aboutP1: "أنا سلمان أمير، مطور MERN Stack وقائد مشاريع تقنية مقيم في لاهور، باكستان. أحوّل الأفكار إلى منتجات ويب سريعة وقابلة للتطوير — من مخططات قواعد البيانات وواجهات API إلى آخر بكسل.",
     aboutP2: "يجمع عملي بين هندسة الستاك الكامل وقيادة التسليم: أنجزت أكثر من 20 مشروعًا في معرض أعمالي ونسّقت أكثر من 100 موقع عميل شهريًا مع فرق التصميم والتطوير والمحتوى وتحسين محركات البحث.",
     aboutAvailability: "متاح للعمل الحر والوظائف بدوام كامل",
@@ -809,8 +819,9 @@ export default function App() {
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </motion.a>
                 <motion.a 
-                  href="#contact"
-                  onClick={(e) => handleNavClick(e, 'contact')}
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.02, backgroundColor: 'rgba(255,255,255,0.05)' }}
                   whileTap={{ scale: 0.98 }}
                   className="px-6 py-3.5 rounded-lg border border-brand-outline-variant text-brand-primary font-mono font-bold text-sm transition-all cursor-pointer"
@@ -850,6 +861,10 @@ export default function App() {
 
           </div>
         </section>
+
+
+        {/* ==================== SECTION: ABOUT ==================== */}
+        <About t={t} />
 
 
         {/* ==================== SECTION 2: TECH STACK ==================== */}
