@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
-  Database, Layers, Atom, Terminal, Rocket, Award, 
-  Mail, MapPin, Link as LinkIcon, Code2, Share2, 
+  Database, Layers, Atom, Terminal, Award, 
+  Mail, MapPin, Link as LinkIcon, Share2, 
   Eye, Github, Linkedin, ChevronRight, Cpu, Menu, X, 
   Activity, FileJson, Check, Lock, Trash2, ExternalLink,
   Sun, Moon, Globe, ArrowUp
 } from 'lucide-react';
-import { assets, aboutInfo, skills as assetsSkills, projects as assetsProjects } from './assets/assets';
-import { AboutCard } from './components/AboutCard';
+import { assets, skills as assetsSkills, projects as assetsProjects } from './assets/assets';
 import { SkillCard } from './components/SkillCard';
 import { ProjectCard } from './components/ProjectCard';
 import { GitHubStats } from './components/GitHubStats';
@@ -853,204 +852,6 @@ export default function App() {
         </section>
 
 
-        {/* ==================== SECTION: ABOUT ==================== */}
-        <motion.section 
-          id="about" 
-          className="space-y-14 scroll-mt-24 md:scroll-mt-28"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <div className="text-center space-y-3">
-            <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
-              {t('aboutMe')}
-            </span>
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-brand-on-surface text-center">
-              {t('archEcosystems')}
-            </h2>
-            <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-
-            {/* Portrait card */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-start">
-              <div className="relative w-full max-w-xs sm:max-w-sm">
-                {/* Ambient glow */}
-                <div className="absolute -inset-4 bg-gradient-to-tr from-brand-primary/20 to-brand-secondary/20 blur-2xl rounded-3xl opacity-60" aria-hidden="true" />
-
-                <div className="relative gradient-border-card rounded-3xl p-2 overflow-hidden">
-                  <div className="relative rounded-[1.35rem] overflow-hidden">
-                    <img 
-                      src={assets.profileImg2} 
-                      alt="Salman Ameer, MERN Stack Developer" 
-                      referrerPolicy="no-referrer"
-                      className="w-full aspect-[4/5] object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-surface-base/70 via-transparent to-transparent" />
-                  </div>
-
-                  {/* Availability badge */}
-                  <div className="absolute bottom-5 left-5 right-5 flex items-center gap-3 rounded-xl bg-surface-base/70 backdrop-blur-md border border-white/10 px-3.5 py-2.5">
-                    <span className="relative flex w-2 h-2 shrink-0">
-                      <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75 animate-ping" />
-                      <span className="relative inline-flex w-2 h-2 rounded-full bg-emerald-400" />
-                    </span>
-                    <span className="font-mono text-[10px] md:text-[11px] font-bold uppercase tracking-wider text-brand-on-surface leading-snug">
-                      {t('aboutAvailability')}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Bio & highlights */}
-            <div className="lg:col-span-7 space-y-7">
-              <div className="space-y-4">
-                <p className="font-mono text-[11px] text-brand-primary tracking-[0.2em] uppercase">
-                  {t('role')}
-                </p>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-brand-on-surface">
-                  Salman Ameer
-                </h3>
-                <p className="font-sans text-sm md:text-base text-brand-on-surface-variant leading-relaxed">
-                  {t('aboutP1')}
-                </p>
-                <p className="font-sans text-sm md:text-base text-brand-on-surface-variant leading-relaxed">
-                  {t('aboutP2')}
-                </p>
-              </div>
-
-              {/* Portfolio stats */}
-              <div className="grid grid-cols-3 gap-3 md:gap-4">
-                {[
-                  { value: `${assetsProjects.length}+`, label: t('aboutStatProjects') },
-                  { value: '100+', label: t('aboutStatDeliveries') },
-                  { value: '4', label: t('aboutStatStack') }
-                ].map((stat) => (
-                  <div 
-                    key={stat.label} 
-                    className="gradient-border-card rounded-xl px-2 py-4 md:px-5 md:py-5 text-center"
-                  >
-                    <p className="font-display text-2xl md:text-3xl font-extrabold text-brand-primary">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 font-mono text-[9px] md:text-[10px] uppercase tracking-wider text-brand-on-surface-variant leading-snug">
-                      {stat.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-
-              {/* Quick facts */}
-              <div className="gradient-border-card rounded-xl p-5 md:p-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/15 text-brand-primary flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
-                      {t('aboutLocation')}
-                    </p>
-                    <p className="font-sans text-xs font-semibold text-brand-on-surface">
-                      Lahore, Pakistan
-                    </p>
-                  </div>
-                </div>
-
-                <a href="mailto:salman.leo2@gmail.com" className="flex items-center gap-3 group">
-                  <div className="w-9 h-9 rounded-lg bg-brand-secondary/10 border border-brand-secondary/15 text-brand-secondary flex items-center justify-center shrink-0">
-                    <Mail className="w-4 h-4" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
-                      {t('emailAddress')}
-                    </p>
-                    <p className="font-sans text-xs font-semibold text-brand-on-surface group-hover:text-brand-primary transition-colors break-all">
-                      salman.leo2@gmail.com
-                    </p>
-                  </div>
-                </a>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-brand-primary/10 border border-brand-primary/15 text-brand-primary flex items-center justify-center shrink-0">
-                    <Code2 className="w-4 h-4" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
-                      {t('aboutFocus')}
-                    </p>
-                    <p className="font-sans text-xs font-semibold text-brand-on-surface">
-                      {t('aboutFactFocus')}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg bg-brand-tertiary/10 border border-brand-tertiary/15 text-brand-tertiary flex items-center justify-center shrink-0">
-                    <Rocket className="w-4 h-4" />
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-mono text-[9px] uppercase tracking-widest text-brand-on-surface-variant">
-                      {t('aboutAvailabilityLabel')}
-                    </p>
-                    <p className="font-sans text-xs font-semibold text-brand-on-surface">
-                      {t('aboutFactAvailability')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
-                <a 
-                  href="#projects" 
-                  onClick={(e) => handleNavClick(e, 'projects')}
-                  className="px-5 py-3 rounded-lg bg-brand-primary text-surface-base font-mono font-bold text-xs flex items-center gap-2 hover:bg-brand-primary-dim transition-colors group cursor-pointer shadow-[0_0_20px_rgba(229,139,174,0.2)]"
-                >
-                  {t('aboutCtaWork')}
-                  <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a 
-                  href="#contact" 
-                  onClick={(e) => handleNavClick(e, 'contact')}
-                  className="px-5 py-3 rounded-lg border border-brand-outline-variant text-brand-primary font-mono font-bold text-xs hover:bg-white/5 transition-colors cursor-pointer"
-                >
-                  {t('aboutCtaTalk')}
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Engineering principles */}
-          <div className="space-y-8 pt-4">
-            <div className="text-center space-y-3">
-              <span className="font-mono text-xs text-brand-primary tracking-widest uppercase text-center block">
-                {t('engPhilosophy')}
-              </span>
-              <h3 className="font-display text-2xl md:text-3xl font-bold text-brand-on-surface text-center">
-                {t('aboutPrinciplesTitle')}
-              </h3>
-              <div className="h-1 w-20 bg-brand-primary mx-auto rounded-full"></div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {aboutInfo.map((info, index) => (
-                <AboutCard
-                  key={index}
-                  icon={info.icon}
-                  title={info.title}
-                  description={info.description}
-                  color={info.color}
-                  index={index}
-                />
-              ))}
-            </div>
-          </div>
-        </motion.section>
-
-
         {/* ==================== SECTION 2: TECH STACK ==================== */}
         <motion.section 
           id="stack" 
@@ -1444,7 +1245,6 @@ export default function App() {
             </div>
 
 
-
           </div>
         </motion.section>
 
@@ -1588,7 +1388,6 @@ export default function App() {
           </div>
         </div>
       </footer>
-
 
 
       {/* Futuristic Floating Back to Top Button */}
